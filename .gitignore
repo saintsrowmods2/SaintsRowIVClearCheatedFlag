@@ -1,0 +1,5 @@
+packages/
+ClearCheatedFlag/obj/
+ClearCheatedFlag/bin/
+.vs/
+*.user
