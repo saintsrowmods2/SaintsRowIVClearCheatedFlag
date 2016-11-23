@@ -20,8 +20,14 @@ namespace ClearCheatedFlag
             }
 
             string filename = args[0];
+            string backupFilename = filename + ".bak";
 
             SaveFile file = null;
+
+            if (File.Exists(backupFilename))
+                File.Delete(backupFilename);
+
+            File.Copy(filename, backupFilename);
 
             using (Stream s = File.OpenRead(filename))
             {
